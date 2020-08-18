@@ -1,0 +1,8 @@
+.idea/
+*.iml
+target/
+project/
+project/build.properties
+output/
+src/Ccode/wrapper_python/GLFM.cpp
+src/Ccode/wrapper_python/GLFMlib.so
