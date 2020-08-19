@@ -1,0 +1,124 @@
+@relation dataset
+
+@attribute hair {false, true}
+@attribute feathers {false, true}
+@attribute eggs {false, true}
+@attribute milk {false, true}
+@attribute airborne {false, true}
+@attribute aquatic {false, true}
+@attribute predator {false, true}
+@attribute toothed {false, true}
+@attribute backbone {false, true}
+@attribute breathes {false, true}
+@attribute venomous {false, true}
+@attribute fins {false, true}
+@attribute legs {0, 2, 4, 5, 6, 8}
+@attribute tail {false, true}
+@attribute domestic {false, true}
+@attribute catsize {false, true}
+@attribute type {mammal, bird, reptile, fish, amphibian, insect, invertebrate}
+
+
+@data
+
+true,false,?,true,false,false,true,?,true,true,false,false,4,false,false,true,mammal
+?,?,false,true,false,false,true,true,true,?,?,false,?,false,false,true,mammal
+true,false,false,true,false,false,false,?,true,true,false,false,4,true,false,true,?
+true,?,false,true,false,?,false,true,?,true,false,false,4,?,false,true,mammal
+true,?,false,true,false,false,false,true,?,true,?,false,4,true,false,true,mammal
+?,?,false,true,false,false,?,?,true,true,false,?,4,?,false,true,?
+true,false,false,true,?,false,?,true,?,true,false,?,4,true,false,?,mammal
+true,false,false,true,?,false,false,true,true,?,false,false,4,true,false,?,mammal
+false,false,true,false,false,?,true,?,true,false,false,?,0,true,false,?,fish
+false,false,true,false,false,true,?,true,true,?,?,true,0,true,false,false,fish
+false,false,true,false,false,true,?,?,true,false,false,true,0,?,false,false,fish
+false,?,?,false,?,true,true,true,true,false,?,true,0,?,?,?,fish
+?,false,true,?,false,?,?,true,true,false,false,true,?,?,?,false,fish
+?,false,false,true,?,false,true,?,true,true,false,false,4,?,false,true,?
+?,false,?,true,false,false,true,?,true,?,false,false,4,true,?,true,mammal
+?,?,false,?,false,false,true,true,true,?,?,false,4,true,false,true,mammal
+true,false,false,?,false,false,true,true,true,true,?,false,?,true,?,true,mammal
+true,?,false,?,?,false,true,true,true,true,false,false,4,true,false,true,mammal
+?,?,false,true,?,?,?,?,?,true,false,false,4,true,false,true,mammal
+true,false,false,?,false,false,?,true,true,?,false,false,4,?,false,true,mammal
+?,false,?,true,false,false,true,true,true,true,false,false,?,true,false,true,mammal
+true,?,false,true,false,false,?,?,true,true,false,?,?,?,false,true,?
+?,false,false,true,false,false,true,true,?,true,false,false,4,?,false,?,mammal
+true,false,false,true,false,false,false,?,true,true,false,false,?,?,true,true,mammal
+true,false,false,true,false,?,?,true,true,?,?,false,4,?,true,true,mammal
+true,false,false,true,?,false,false,true,true,?,false,false,4,?,true,true,mammal
+true,?,false,true,?,false,false,?,true,true,?,?,4,true,true,?,mammal
+?,?,true,false,?,?,?,true,true,false,false,true,?,?,?,false,fish
+true,?,false,true,false,false,?,true,true,true,false,?,4,false,?,false,mammal
+?,?,true,false,?,?,?,false,true,true,false,false,?,?,true,false,bird
+false,true,true,false,true,false,false,false,true,true,false,false,2,?,true,false,bird
+false,true,true,?,?,false,?,?,?,true,?,false,2,?,?,?,?
+false,false,true,false,?,false,true,false,?,?,false,false,0,false,?,false,?
+false,false,?,false,?,true,true,false,false,false,false,false,4,?,false,false,invertebrate
+false,false,?,false,false,true,true,false,?,?,false,?,?,false,?,false,invertebrate
+false,false,?,false,false,true,?,?,?,?,false,false,?,false,false,false,?
+false,true,true,false,true,false,true,?,true,true,?,?,2,true,?,false,bird
+?,true,true,false,true,?,true,?,true,?,false,?,2,true,false,?,bird
+?,false,?,?,?,true,?,true,?,false,false,?,0,true,?,true,?
+?,false,true,?,?,true,true,?,true,false,?,true,?,true,false,true,?
+false,false,?,false,false,true,true,true,?,?,?,true,0,?,?,true,fish
+false,false,false,?,false,true,true,true,true,?,false,true,0,true,false,?,mammal
+false,false,?,true,false,true,true,true,true,true,false,true,0,?,?,true,mammal
+?,true,true,?,true,true,false,?,true,true,false,false,2,true,?,?,bird
+?,true,?,false,?,false,false,false,true,true,false,false,2,true,false,true,?
+false,false,true,?,false,false,false,false,?,true,?,?,6,?,false,false,insect
+?,?,?,false,false,?,?,false,false,true,?,false,6,false,false,false,insect
+false,false,true,?,?,true,true,true,true,?,false,false,4,?,false,false,amphibian
+?,?,true,false,false,true,true,?,true,?,true,false,4,false,false,?,amphibian
+true,false,false,?,true,?,false,true,true,?,false,false,2,true,false,false,mammal
+?,?,false,true,?,?,false,true,true,?,false,false,2,true,?,?,mammal
+true,false,false,true,?,false,true,true,true,true,?,false,?,?,true,?,?
+?,?,true,false,true,?,?,false,?,true,false,?,6,false,false,false,?
+true,false,false,true,false,?,false,?,true,true,?,false,2,false,?,?,mammal
+false,?,?,?,true,true,true,false,?,true,false,false,2,true,?,?,bird
+?,true,true,false,true,true,?,false,true,true,false,false,?,true,false,false,bird
+false,true,?,?,true,true,true,false,true,?,false,false,2,true,?,?,bird
+false,false,true,false,?,true,false,true,true,false,false,true,?,true,?,?,?
+?,?,true,false,false,true,?,true,?,?,false,?,?,true,false,false,fish
+false,false,true,?,false,?,?,true,?,false,false,true,0,true,false,false,?
+?,false,?,true,false,false,false,true,true,true,?,false,4,?,?,?,mammal
+?,?,?,true,false,?,false,?,true,true,false,false,4,true,false,false,mammal
+true,false,false,true,?,false,false,?,true,?,false,false,4,true,false,false,mammal
+?,false,true,false,true,?,?,false,?,true,?,?,6,false,true,?,insect
+?,?,true,false,true,false,false,false,?,?,?,false,6,false,false,?,insect
+true,false,true,false,true,false,false,false,?,true,false,?,?,?,false,?,insect
+false,true,true,false,false,?,?,false,true,true,false,?,2,true,false,false,bird
+false,false,true,false,true,false,true,false,?,true,?,false,6,false,false,false,insect
+false,?,?,?,true,false,false,false,?,true,false,?,?,true,false,?,bird
+false,?,true,false,true,false,false,?,true,true,false,false,2,true,?,false,?
+false,true,?,false,true,false,false,false,true,true,false,?,2,true,false,?,bird
+false,?,true,false,true,false,false,false,?,true,?,false,?,true,false,?,?
+true,false,?,true,false,true,true,true,true,true,false,false,4,true,false,true,mammal
+true,false,false,true,?,?,true,true,?,?,false,false,4,?,false,false,mammal
+true,false,false,?,?,?,true,true,?,?,false,false,4,true,false,false,mammal
+false,false,?,false,false,true,true,?,?,true,?,false,4,true,false,?,amphibian
+false,false,true,false,?,true,true,false,false,false,?,?,8,false,?,true,?
+false,true,true,false,false,false,false,false,?,?,false,false,2,true,?,?,bird
+?,?,true,false,false,?,true,false,true,?,false,false,?,?,false,?,bird
+?,?,true,?,false,?,?,true,true,?,true,false,0,true,?,false,?
+true,?,true,true,?,true,true,?,true,?,false,false,?,?,false,true,mammal
+true,false,false,true,false,?,true,true,?,true,?,?,4,?,?,true,?
+false,?,true,false,false,false,true,false,?,true,false,false,?,true,false,true,?
+false,false,false,?,false,false,?,false,?,true,?,false,8,true,?,false,invertebrate
+?,false,false,true,false,true,true,true,true,true,?,true,0,false,false,?,mammal
+true,?,false,true,?,true,?,true,?,true,?,true,2,true,?,?,mammal
+false,false,false,?,?,?,true,?,true,?,true,false,?,true,false,?,reptile
+?,?,?,false,false,?,true,false,false,false,?,?,0,false,?,false,?
+false,false,true,false,?,false,true,true,true,true,false,false,0,true,?,false,?
+false,false,true,false,?,false,false,false,false,true,?,?,0,false,?,false,?
+false,?,true,false,?,?,false,false,?,true,?,false,?,false,false,?,?
+true,false,false,true,false,?,?,true,?,?,?,false,2,?,?,false,?
+false,false,true,?,false,?,?,false,false,?,false,false,5,false,false,false,invertebrate
+false,?,?,?,false,?,true,?,?,false,?,true,?,true,?,true,?
+false,true,true,false,true,true,false,?,true,true,false,false,2,?,false,?,bird
+false,?,true,?,?,true,?,true,true,true,false,false,4,false,false,false,amphibian
+false,false,true,false,false,false,false,false,true,true,false,false,4,?,?,true,?
+false,false,?,false,?,false,true,true,true,?,?,?,4,true,false,?,reptile
+?,?,true,?,?,false,?,?,true,?,false,false,?,true,false,?,bird
+true,?,false,true,false,?,?,true,true,?,?,?,2,true,false,?,mammal
+?,false,true,?,true,false,false,false,false,?,?,false,6,false,?,false,insect
