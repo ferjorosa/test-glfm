@@ -2,7 +2,7 @@ from scipy.io import arff
 import numpy as np
 import pandas as pd
 import time
-from vbsem_experiments import EstimateMSE
+from vbsem_experiments import Estimate
 import json
 
 import sys
@@ -63,7 +63,7 @@ class ContinuousExperiment:
             imputed_data = pd.DataFrame(result[0])
 
             # Store the MSE and the learning time
-            mse = EstimateMSE.mse(missing_data, imputed_data, true_data)
+            mse = Estimate.mse(missing_data, imputed_data, true_data)
             learning_time = end_time - init_time
 
             run_result = {"mse": mse, "learning_time": learning_time}
