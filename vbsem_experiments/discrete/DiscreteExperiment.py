@@ -43,13 +43,9 @@ class DiscreteExperiment:
             missing_data = arff.loadarff(missing_data_path)
             missing_data = pd.DataFrame(missing_data[0])
 
-            str_data = missing_data.select_dtypes([np.object])
-            if str_data.empty == False:
-                str_data = str_data.stack().str.decode('utf-8').unstack()
-                for col in str_data:
-                    missing_data[col] = str_data[col]
             missing_data.replace(b'?', np.nan, inplace=True)
-            missing_data.replace("?", np.nan, inplace=True)
+            for col in missing_data:
+                missing_data[col] = pd.to_numeric(missing_data[col])
 
             # Prepare GLFM data structure
             missing_data_struct = dict()

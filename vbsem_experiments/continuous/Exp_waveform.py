@@ -1,7 +1,7 @@
 import ContinuousExperiment
 
 
-class Exp_Waveform(ContinuousExperiment.ContinuousExperiment):
+class Exp_waveform(ContinuousExperiment.ContinuousExperiment):
 
     def __init__(self, _data_name):
         ContinuousExperiment.ContinuousExperiment.__init__(self, _data_name)
@@ -21,7 +21,7 @@ def main():
     missing_percentage = 0.2
     data_name = "waveform"
     run_log = True
-    exp = Exp_Waveform(data_name)
+    exp = Exp_waveform(data_name)
     exp.run(missing_percentage, n_runs, run_log)
 
 

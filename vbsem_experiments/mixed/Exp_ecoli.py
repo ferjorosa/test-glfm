@@ -1,7 +1,7 @@
 import MixedExperiment
 
 
-class Exp_Ecoli(MixedExperiment.MixedExperiment):
+class Exp_ecoli(MixedExperiment.MixedExperiment):
 
     def __init__(self, _data_name):
         MixedExperiment.MixedExperiment.__init__(self, _data_name)
@@ -21,7 +21,7 @@ def main():
     missing_percentage = 0.2
     data_name = "ecoli"
     run_log = True
-    exp = Exp_Ecoli(data_name)
+    exp = Exp_ecoli(data_name)
     exp.run(missing_percentage, n_runs, run_log)
 
 

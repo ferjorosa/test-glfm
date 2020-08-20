@@ -17,7 +17,7 @@ class Exp_buddymove(ContinuousExperiment.ContinuousExperiment):
 
 
 def main():
-    n_runs = 3
+    n_runs = 10
     missing_percentage = 0.2
     data_name = "buddymove"
     run_log = True
