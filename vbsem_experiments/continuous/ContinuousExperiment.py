@@ -15,9 +15,9 @@ import GLFM
 
 class ContinuousExperiment:
 
-    def __init__(self, data_name, data_types):
+    def __init__(self, data_name):
         self.data_name = data_name
-        self.data_types = data_types
+        self.data_types = data_types(data_name)
 
     def run(self, missing_percentage, n_runs, run_log):
         percentage_string = "0" + str(int(missing_percentage * 10))
@@ -102,3 +102,17 @@ class ContinuousExperiment:
         else:
             with open(path + self.data_name + "_" + percentage_string + "_results_GLFM.json", 'w') as fp:
                 json.dump(results, fp, sort_keys=True, indent=4)
+
+
+def data_types(data_name):
+    data_path = "../../vbsem_data/continuous/" + data_name + "/" + data_name + ".arff"
+    data = arff.loadarff(data_path)
+    data = pd.DataFrame(data[0])
+
+    s = ""
+    for type in data.dtypes:
+        if type.name.startswith("float"):
+            s += "g"
+        elif type.name == "object":
+            s += "c"
+    return s
