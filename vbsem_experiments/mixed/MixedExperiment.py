@@ -28,6 +28,14 @@ class MixedExperiment:
         true_data = arff.loadarff(true_data_path)
         true_data = pd.DataFrame(true_data[0])
 
+        # Group colnames with respecto to its datatype
+        discrete_cols = true_data.select_dtypes([np.object]).columns.values
+        continuous_cols = true_data.select_dtypes(['float16', 'float32', 'float64']).columns.values
+
+        # Transform all column types to numeric (requirement of GLFM)
+        for col in true_data:
+            true_data[col] = pd.to_numeric(true_data[col])
+
         # Prepare result data structures (to export them as JSON)
         results = {}
         runs = {}
@@ -44,13 +52,11 @@ class MixedExperiment:
             missing_data = arff.loadarff(missing_data_path)
             missing_data = pd.DataFrame(missing_data[0])
 
-            str_data = missing_data.select_dtypes([np.object])
-            if str_data.empty == False:
-                str_data = str_data.stack().str.decode('utf-8').unstack()
-                for col in str_data:
-                    missing_data[col] = str_data[col]
             missing_data.replace(b'?', np.nan, inplace=True)
-            missing_data.replace("?", np.nan, inplace=True)
+
+            # Transform column types to numeric (requirement of GLFM)
+            for col in missing_data:
+                missing_data[col] = pd.to_numeric(missing_data[col])
 
             # Prepare GLFM data structure
             missing_data_struct = dict()
@@ -61,15 +67,15 @@ class MixedExperiment:
             init_time = time.time() * 1000
             result = GLFM.complete(missing_data_struct)
             end_time = time.time() * 1000
-            imputed_data = pd.DataFrame(result[0])
+            imputed_data = pd.DataFrame(result[0], columns=true_data.columns.values)
 
             # Store the MSE, the accuracy and the learning time
-            accuracy = Estimate.accuracy(missing_data.select_dtypes([np.object]),
-                                         imputed_data.select_dtypes([np.object]),
-                                         true_data.select_dtypes([np.object]))
-            mse = Estimate.mse(missing_data.select_dtypes(['float16', 'float32', 'float64']),
-                               imputed_data.select_dtypes(['float16', 'float32', 'float64']),
-                               true_data.select_dtypes(['float16', 'float32', 'float64']))
+            accuracy = Estimate.accuracy(missing_data[discrete_cols],
+                                         imputed_data[discrete_cols],
+                                         true_data[discrete_cols])
+            mse = Estimate.mse(missing_data[continuous_cols],
+                               imputed_data[continuous_cols],
+                               true_data[continuous_cols])
             learning_time = end_time - init_time
 
             run_result = {"mse": mse, "accuracy": accuracy, "learning_time": learning_time}

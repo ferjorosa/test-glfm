@@ -16,7 +16,7 @@ print('# SCRIPT TO CHECK CALL TO GLFM LIBRARY')
 print('# -------------------------------------------------\n')
 
 data = dict()
-data['X'] = np.array([[1.0, 1, -0.3, 1, 1],[6.3, 2, 3.8, 23, 1],[11, 3, 4.1, 4, 2]]) # (N,D)
+data['X'] = np.array([[1.0, 1, -0.3, 1, 1],[6.3, 2, 3.8, 23, np.nan],[11, 3, 4.1, 4, 2]]) # (N,D)
 data['C'] = 'poGNc'
 
 hidden = dict()
@@ -38,6 +38,8 @@ print hidden['theta']
 print hidden['mu']
 print hidden['w']
 print hidden['s2Y']
+
+test = GLFM.complete(data,hidden)
 
 print('\n# -------------------')
 print "# SUCCESSFUL"

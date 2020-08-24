@@ -1,5 +1,4 @@
 from vbsem_experiments.discrete import Exp_alarm
-from vbsem_experiments.discrete import Exp_asia
 from vbsem_experiments.discrete import Exp_balance_scale
 from vbsem_experiments.discrete import Exp_breast_cancer
 from vbsem_experiments.discrete import Exp_car_evaluation
@@ -29,9 +28,6 @@ def main():
     run_log = True
 
     exp = Exp_alarm.Exp_alarm("alarm")
-    exp.run(missing_percentage, n_runs, run_log)
-
-    exp = Exp_asia.Exp_asia("asia")
     exp.run(missing_percentage, n_runs, run_log)
 
     exp = Exp_balance_scale.Exp_balance_scale("balance_scale")

@@ -1,5 +1,4 @@
 from vbsem_experiments.mixed import Exp_abalone
-from vbsem_experiments.mixed import Exp_arrythmia
 from vbsem_experiments.mixed import Exp_autos
 from vbsem_experiments.mixed import Exp_blood_transfusion
 from vbsem_experiments.mixed import Exp_breast_cancer_coimbra
@@ -33,9 +32,6 @@ def main():
     run_log = True
 
     exp = Exp_abalone.Exp_abalone("abalone")
-    exp.run(missing_percentage, n_runs, run_log)
-
-    exp = Exp_arrythmia.Exp_arrythmia("arrythmia")
     exp.run(missing_percentage, n_runs, run_log)
 
     exp = Exp_autos.Exp_autos("autos")

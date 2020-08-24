@@ -17,7 +17,7 @@ class Exp_iris(MixedExperiment.MixedExperiment):
 
 
 def main():
-    n_runs = 10
+    n_runs = 1
     missing_percentage = 0.2
     data_name = "iris"
     run_log = True
