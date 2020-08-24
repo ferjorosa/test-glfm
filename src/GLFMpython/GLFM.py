@@ -242,7 +242,8 @@ def computeMAP(C, Zp, hidden, params=dict(), idxsD=[]):
         elif C[d] == 'n':
             X_map[:,dd] = mf.f_n( aux, hidden['mu'][d], hidden['w'][d] )
         elif C[d] == 'c':
-            X_map[:,dd] = mf.f_c( np.inner(Zp, hidden['B'][d,:,\
+            # MyNote: modified by @ferjorosa, there is a bug in f_c
+            X_map[:,dd] = mf.f_c2( np.inner(Zp, hidden['B'][d,:,\
                     range(int(hidden['R'][d].shape[0])) ]) )
         elif C[d] == 'o':
             X_map[:,dd] = mf.f_o( aux, hidden['theta'][d,range(int(hidden['R'][d].shape[0]-1))] )

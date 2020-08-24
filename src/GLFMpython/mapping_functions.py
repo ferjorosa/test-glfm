@@ -37,6 +37,12 @@ def f_c(y):
     # [a,x] = max(y,[],2);
     return x
 
+# Note: this has been done by @ferjorosa. There is a bug in f_c that prevents it from properly working:
+# the expected dimension doesnt match with the argument dimension of y, which is normally [N*1] and
+# returns [1*1]
+def f_c2(y):
+    return np.argmax(y, axis=0)
+
 def f_n(y,mu,w):
     # transformation function for count data
     # Y -> X (from pseudo-obversations to data)
