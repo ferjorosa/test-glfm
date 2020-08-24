@@ -1,4 +1,4 @@
-@relation 100_plant_species
+@relation dataset
 
 @attribute attr_2 real
 @attribute attr_3 real

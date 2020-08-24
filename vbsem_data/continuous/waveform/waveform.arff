@@ -1,4 +1,4 @@
-@relation waveform
+@relation dataset
 
 @attribute attr_1 real
 @attribute attr_2 real
