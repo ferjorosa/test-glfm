@@ -28,7 +28,7 @@ class MixedExperiment:
         true_data = arff.loadarff(true_data_path)
         true_data = pd.DataFrame(true_data[0])
 
-        # Group colnames with respecto to its datatype
+        # Group colnames with respect to to its datatype
         discrete_cols = true_data.select_dtypes([np.object]).columns.values
         continuous_cols = true_data.select_dtypes(['float16', 'float32', 'float64']).columns.values
 
@@ -40,7 +40,7 @@ class MixedExperiment:
         results = {}
         runs = {}
         avg_learning_time = 0
-        avg_mse = 0
+        avg_nrmse = 0
         avg_accuracy = 0
 
         # Load missing data and impute its missing values with GLFM, then estimate its mean squared error
@@ -73,30 +73,30 @@ class MixedExperiment:
             accuracy = Estimate.accuracy(missing_data[discrete_cols],
                                          imputed_data[discrete_cols],
                                          true_data[discrete_cols])
-            mse = Estimate.mse(missing_data[continuous_cols],
+            nrmse = Estimate.nrmse(missing_data[continuous_cols],
                                imputed_data[continuous_cols],
                                true_data[continuous_cols])
             learning_time = end_time - init_time
 
-            run_result = {"mse": mse, "accuracy": accuracy, "learning_time": learning_time}
+            run_result = {"nrmse": nrmse, "accuracy": accuracy, "learning_time": learning_time}
 
             runs["run_" + str(i)] = run_result
             avg_learning_time = avg_learning_time + learning_time
-            avg_mse = avg_mse + mse
+            avg_nrmse = avg_nrmse + nrmse
             avg_accuracy = avg_accuracy + accuracy
 
             if run_log:
                 print("----------------------------------------")
                 print("Run (" + str(i) + "): ")
-                print("MSE: " + str(mse))
+                print("NRMSE: " + str(nrmse))
                 print("Accuracy: " + str(accuracy))
                 print("Learning time: " + str(learning_time))
 
         # Generate the average results and store them in the dictionary, then store them in a JSON file
-        avg_mse = avg_mse / n_runs
+        avg_nrmse = avg_nrmse / n_runs
         avg_accuracy = avg_accuracy / n_runs
         avg_learning_time = avg_learning_time / n_runs / 1000  # in seconds
-        results["average_mse"] = avg_mse
+        results["average_nrmse"] = avg_nrmse
         results["average_accuracy"] = avg_accuracy
         results["average_learning_time"] = avg_learning_time
         results["runs"] = runs
@@ -104,7 +104,7 @@ class MixedExperiment:
 
         print("----------------------------------------")
         print("----------------------------------------")
-        print("Average MSE: " + str(avg_mse))
+        print("Average NRMSE: " + str(avg_nrmse))
         print("Average Accuracy: " + str(avg_accuracy))
         print("Average learning time: " + str(avg_learning_time))
 

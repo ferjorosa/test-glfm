@@ -28,6 +28,10 @@ class DiscreteExperiment:
         true_data = arff.loadarff(true_data_path)
         true_data = pd.DataFrame(true_data[0])
 
+        # Transform all column types to numeric (requirement of GLFM)
+        for col in true_data:
+            true_data[col] = pd.to_numeric(true_data[col])
+
         # Prepare result data structures (to export them as JSON)
         results = {}
         runs = {}

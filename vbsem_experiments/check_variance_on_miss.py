@@ -3,12 +3,12 @@ import numpy as np
 import pandas as pd
 import os
 
-data_name = "asia"
+data_name = "iris"
 missing_percentage = 0.2
 i = 1
 percentage_string = "0" + str(int(missing_percentage * 10))
 
-directory = "../vbsem_data/continuous/"
+directory = "../vbsem_data/mixed/"
 data_names = os.listdir(directory)
 
 for data_name in data_names:

@@ -17,8 +17,8 @@ class Exp_breast_cancer(DiscreteExperiment.DiscreteExperiment):
 
 
 def main():
-    n_runs = 10
-    missing_percentage = 0.1
+    n_runs = 1
+    missing_percentage = 0.2
     data_name = "breast_cancer"
     run_log = True
     exp = Exp_breast_cancer(data_name)

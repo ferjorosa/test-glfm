@@ -32,7 +32,7 @@ class ContinuousExperiment:
         results = {}
         runs = {}
         avg_learning_time = 0
-        avg_mse = 0
+        avg_nrmse = 0
 
         # Load missing data and impute its missing values with GLFM, then estimate its mean squared error
         results_path = "../../vbsem_results/continuous/" + self.data_name + "/"
@@ -59,32 +59,32 @@ class ContinuousExperiment:
             imputed_data = pd.DataFrame(result[0])
 
             # Store the MSE and the learning time
-            mse = Estimate.mse(missing_data, imputed_data, true_data)
+            nrmse = Estimate.nrmse(missing_data, imputed_data, true_data)
             learning_time = end_time - init_time
 
-            run_result = {"mse": mse, "learning_time": learning_time}
+            run_result = {"nrmse": nrmse, "learning_time": learning_time}
 
             runs["run_" + str(i)] = run_result
             avg_learning_time = avg_learning_time + learning_time
-            avg_mse = avg_mse + mse
+            avg_nrmse = avg_nrmse + nrmse
 
             if run_log:
                 print("----------------------------------------")
                 print("Run (" + str(i) + "): ")
-                print("MSE: " + str(mse))
+                print("NRMSE: " + str(nrmse))
                 print("Learning time: " + str(learning_time))
 
         # Generate the average results and store them in the dictionary, then store them in a JSON file
-        avg_mse = avg_mse / n_runs
+        avg_nrmse = avg_nrmse / n_runs
         avg_learning_time = avg_learning_time / n_runs / 1000  # in seconds
-        results["average_mse"] = avg_mse
+        results["average_nrmse"] = avg_nrmse
         results["average_learning_time"] = avg_learning_time
         results["runs"] = runs
         self.store_json(results, results_path, percentage_string)
 
         print("----------------------------------------")
         print("----------------------------------------")
-        print("Average MSE: " + str(avg_mse))
+        print("Average NRMSE: " + str(avg_nrmse))
         print("Average learning time: " + str(avg_learning_time))
 
 

@@ -27,87 +27,89 @@ from vbsem_experiments.mixed import Exp_yeast
 
 
 def main():
-    missing_percentage = 0.1
-    n_runs = 10
+    n_runs = 5
     run_log = True
 
-    exp = Exp_abalone.Exp_abalone("abalone")
-    exp.run(missing_percentage, n_runs, run_log)
+    for i in range(1, 7):
+        missing_percentage = i / 10.0
 
-    exp = Exp_autos.Exp_autos("autos")
-    exp.run(missing_percentage, n_runs, run_log)
+        exp = Exp_abalone.Exp_abalone("abalone")
+        exp.run(missing_percentage, n_runs, run_log)
 
-    exp = Exp_blood_transfusion.Exp_blood_transfusion("blood_transfusion")
-    exp.run(missing_percentage, n_runs, run_log)
+        exp = Exp_autos.Exp_autos("autos")
+        exp.run(missing_percentage, n_runs, run_log)
 
-    exp = Exp_breast_cancer_coimbra.Exp_breast_cancer_coimbra("breast_cancer_coimbra")
-    exp.run(missing_percentage, n_runs, run_log)
+        exp = Exp_blood_transfusion.Exp_blood_transfusion("blood_transfusion")
+        exp.run(missing_percentage, n_runs, run_log)
 
-    exp = Exp_cpu.Exp_cpu("cpu")
-    exp.run(missing_percentage, n_runs, run_log)
+        exp = Exp_breast_cancer_coimbra.Exp_breast_cancer_coimbra("breast_cancer_coimbra")
+        exp.run(missing_percentage, n_runs, run_log)
 
-    exp = Exp_cylinder_bands.Exp_cylinder_bands("cylinder_bands")
-    exp.run(missing_percentage, n_runs, run_log)
+        exp = Exp_cpu.Exp_cpu("cpu")
+        exp.run(missing_percentage, n_runs, run_log)
 
-    exp = Exp_ecoli.Exp_ecoli("ecoli")
-    exp.run(missing_percentage, n_runs, run_log)
+        exp = Exp_cylinder_bands.Exp_cylinder_bands("cylinder_bands")
+        exp.run(missing_percentage, n_runs, run_log)
 
-    exp = Exp_forest_fires.Exp_forest_fires("forest_fires")
-    exp.run(missing_percentage, n_runs, run_log)
+        exp = Exp_ecoli.Exp_ecoli("ecoli")
+        exp.run(missing_percentage, n_runs, run_log)
 
-    exp = Exp_glass.Exp_glass("glass")
-    exp.run(missing_percentage, n_runs, run_log)
+        exp = Exp_forest_fires.Exp_forest_fires("forest_fires")
+        exp.run(missing_percentage, n_runs, run_log)
 
-    exp = Exp_haberman.Exp_haberman("haberman")
-    exp.run(missing_percentage, n_runs, run_log)
+        exp = Exp_glass.Exp_glass("glass")
+        exp.run(missing_percentage, n_runs, run_log)
 
-    exp = Exp_ionosphere.Exp_ionosphere("ionosphere")
-    exp.run(missing_percentage, n_runs, run_log)
+        exp = Exp_haberman.Exp_haberman("haberman")
+        exp.run(missing_percentage, n_runs, run_log)
 
-    exp = Exp_iris.Exp_iris("iris")
-    exp.run(missing_percentage, n_runs, run_log)
+        exp = Exp_ionosphere.Exp_ionosphere("ionosphere")
+        exp.run(missing_percentage, n_runs, run_log)
 
-    exp = Exp_musk.Exp_musk("musk")
-    exp.run(missing_percentage, n_runs, run_log)
+        exp = Exp_iris.Exp_iris("iris")
+        exp.run(missing_percentage, n_runs, run_log)
 
-    exp = Exp_parkinsons.Exp_parkinsons("parkinsons")
-    exp.run(missing_percentage, n_runs, run_log)
+        exp = Exp_musk.Exp_musk("musk")
+        exp.run(missing_percentage, n_runs, run_log)
 
-    exp = Exp_planning_relax.Exp_planning_relax("planning_relax")
-    exp.run(missing_percentage, n_runs, run_log)
+        exp = Exp_parkinsons.Exp_parkinsons("parkinsons")
+        exp.run(missing_percentage, n_runs, run_log)
 
-    exp = Exp_qsar_biodeg.Exp_qsar_biodeg("qsar_biodeg")
-    exp.run(missing_percentage, n_runs, run_log)
+        exp = Exp_planning_relax.Exp_planning_relax("planning_relax")
+        exp.run(missing_percentage, n_runs, run_log)
 
-    exp = Exp_seeds.Exp_seeds("seeds")
-    exp.run(missing_percentage, n_runs, run_log)
+        exp = Exp_qsar_biodeg.Exp_qsar_biodeg("qsar_biodeg")
+        exp.run(missing_percentage, n_runs, run_log)
 
-    exp = Exp_segment.Exp_segment("segment")
-    exp.run(missing_percentage, n_runs, run_log)
+        exp = Exp_seeds.Exp_seeds("seeds")
+        exp.run(missing_percentage, n_runs, run_log)
 
-    exp = Exp_thoracic_surgery.Exp_thoracic_surgery("thoracic_surgery")
-    exp.run(missing_percentage, n_runs, run_log)
+        exp = Exp_segment.Exp_segment("segment")
+        exp.run(missing_percentage, n_runs, run_log)
 
-    exp = Exp_thyroid.Exp_thyroid("thyroid")
-    exp.run(missing_percentage, n_runs, run_log)
+        exp = Exp_thoracic_surgery.Exp_thoracic_surgery("thoracic_surgery")
+        exp.run(missing_percentage, n_runs, run_log)
 
-    exp = Exp_user_knowledge.Exp_user_knowledge("user_knowledge")
-    exp.run(missing_percentage, n_runs, run_log)
+        exp = Exp_thyroid.Exp_thyroid("thyroid")
+        exp.run(missing_percentage, n_runs, run_log)
 
-    exp = Exp_vehicle.Exp_vehicle("vehicle")
-    exp.run(missing_percentage, n_runs, run_log)
+        exp = Exp_user_knowledge.Exp_user_knowledge("user_knowledge")
+        exp.run(missing_percentage, n_runs, run_log)
 
-    exp = Exp_vertebral.Exp_vertebral("vertebral")
-    exp.run(missing_percentage, n_runs, run_log)
+        exp = Exp_vehicle.Exp_vehicle("vehicle")
+        exp.run(missing_percentage, n_runs, run_log)
 
-    exp = Exp_wdbc.Exp_wdbc("wdbc")
-    exp.run(missing_percentage, n_runs, run_log)
+        exp = Exp_vertebral.Exp_vertebral("vertebral")
+        exp.run(missing_percentage, n_runs, run_log)
 
-    exp = Exp_wine.Exp_wine("wine")
-    exp.run(missing_percentage, n_runs, run_log)
+        exp = Exp_wdbc.Exp_wdbc("wdbc")
+        exp.run(missing_percentage, n_runs, run_log)
 
-    exp = Exp_yeast.Exp_yeast("yeast")
-    exp.run(missing_percentage, n_runs, run_log)
+        exp = Exp_wine.Exp_wine("wine")
+        exp.run(missing_percentage, n_runs, run_log)
+
+        exp = Exp_yeast.Exp_yeast("yeast")
+        exp.run(missing_percentage, n_runs, run_log)
 
 
 if __name__ == "__main__":
