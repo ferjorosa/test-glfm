@@ -29,9 +29,6 @@ def main():
     for i in range(1, 7):
         missing_percentage = i / 10.0
 
-        exp = Exp_alarm.Exp_alarm("alarm")
-        exp.run(missing_percentage, n_runs, run_log)
-
         exp = Exp_balance_scale.Exp_balance_scale("balance_scale")
         exp.run(missing_percentage, n_runs, run_log)
 
@@ -39,9 +36,6 @@ def main():
         exp.run(missing_percentage, n_runs, run_log)
 
         exp = Exp_car_evaluation.Exp_car_evaluation("car_evaluation")
-        exp.run(missing_percentage, n_runs, run_log)
-
-        exp = Exp_coil_42.Exp_coil_42("coil_42")
         exp.run(missing_percentage, n_runs, run_log)
 
         exp = Exp_hannover.Exp_hannover("hannover")
@@ -65,13 +59,7 @@ def main():
         exp = Exp_mushroom.Exp_mushroom("mushroom")
         exp.run(missing_percentage, n_runs, run_log)
 
-        exp = Exp_news_100.Exp_news_100("news_100")
-        exp.run(missing_percentage, n_runs, run_log)
-
         exp = Exp_nursery.Exp_nursery("nursery")
-        exp.run(missing_percentage, n_runs, run_log)
-
-        exp = Exp_pascal_voc_2007.Exp_pascal_voc_2007("pascal_voc_2007")
         exp.run(missing_percentage, n_runs, run_log)
 
         exp = Exp_solar_flare.Exp_solar_flare("solar_flare")
@@ -89,11 +77,23 @@ def main():
         exp = Exp_web_phishing.Exp_web_phishing("web_phishing")
         exp.run(missing_percentage, n_runs, run_log)
 
-        exp = Exp_webkb_336.Exp_webkb_336("webkb_336")
-        exp.run(missing_percentage, n_runs, run_log)
-
         exp = Exp_zoo.Exp_zoo("zoo")
         exp.run(missing_percentage, n_runs, run_log)
+
+        # exp = Exp_pascal_voc_2007.Exp_pascal_voc_2007("pascal_voc_2007")
+        # exp.run(missing_percentage, n_runs, run_log)
+        #
+        # exp = Exp_alarm.Exp_alarm("alarm")
+        # exp.run(missing_percentage, n_runs, run_log)
+        #
+        # exp = Exp_webkb_336.Exp_webkb_336("webkb_336")
+        # exp.run(missing_percentage, n_runs, run_log)
+        #
+        # exp = Exp_news_100.Exp_news_100("news_100")
+        # exp.run(missing_percentage, n_runs, run_log)
+        #
+        # exp = Exp_coil_42.Exp_coil_42("coil_42")
+        # exp.run(missing_percentage, n_runs, run_log)
 
 
 if __name__ == "__main__":
