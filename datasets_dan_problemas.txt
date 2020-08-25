@@ -1,0 +1,3 @@
+geo_music -> me dice (dentro de GLFM.infer):
+    if not(params['t'][r] == None): # there is an external transform
+    IndexError: list index out of range
