@@ -18,7 +18,7 @@ class Exp_iris(MixedExperiment.MixedExperiment):
 
 
 def main():
-    n_runs = 1
+    n_runs = 5
     data_name = "iris"
     run_log = True
     exp = Exp_iris(data_name)

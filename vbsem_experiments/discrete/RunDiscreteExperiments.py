@@ -14,7 +14,7 @@ from vbsem_experiments.discrete import Exp_news_100
 from vbsem_experiments.discrete import Exp_nursery
 from vbsem_experiments.discrete import Exp_pascal_voc_2007
 from vbsem_experiments.discrete import Exp_solar_flare
-from vbsem_experiments.discrete import Exp_sommerville
+from vbsem_experiments.discrete import Exp_somerville
 from vbsem_experiments.discrete import Exp_spect_heart
 from vbsem_experiments.discrete import Exp_vote
 from vbsem_experiments.discrete import Exp_web_phishing
@@ -65,7 +65,7 @@ def main():
         exp = Exp_solar_flare.Exp_solar_flare("solar_flare")
         exp.run(missing_percentage, n_runs, run_log)
 
-        exp = Exp_sommerville.Exp_sommerville("sommerville")
+        exp = Exp_somerville.Exp_somerville("sommerville")
         exp.run(missing_percentage, n_runs, run_log)
 
         exp = Exp_spect_heart.Exp_spect_heart("spect_heart")

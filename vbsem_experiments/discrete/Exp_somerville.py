@@ -1,7 +1,7 @@
 import DiscreteExperiment
 
 
-class Exp_sommerville(DiscreteExperiment.DiscreteExperiment):
+class Exp_somerville(DiscreteExperiment.DiscreteExperiment):
 
     def __init__(self, _data_name):
         DiscreteExperiment.DiscreteExperiment.__init__(self, _data_name)
@@ -9,7 +9,7 @@ class Exp_sommerville(DiscreteExperiment.DiscreteExperiment):
     def run(self, missing_percentage, n_runs, run_log):
         print("\n------------------------------------------------------------------")
         print("------------------------------------------------------------------")
-        print("-------------------------- SOMMERVILLE ---------------------------")
+        print("-------------------------- SOMERVILLE ---------------------------")
         print("------------------------------------------------------------------")
         print("------------------------------------------------------------------\n")
         print("Missing percentage: " + str(missing_percentage) + "\n")
@@ -19,9 +19,9 @@ class Exp_sommerville(DiscreteExperiment.DiscreteExperiment):
 
 def main():
     n_runs = 5
-    data_name = "sommerville"
+    data_name = "somerville"
     run_log = True
-    exp = Exp_sommerville(data_name)
+    exp = Exp_somerville(data_name)
 
     for i in range(1, 7):
         missing_percentage = i / 10.0
