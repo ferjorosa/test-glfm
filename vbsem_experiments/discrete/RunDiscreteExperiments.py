@@ -74,17 +74,14 @@ def main():
         # exp = Exp_vote.Exp_vote("vote")
         # exp.run(missing_percentage, n_runs, run_log)
 
-        exp = Exp_web_phishing.Exp_web_phishing("web_phishing")
-        exp.run(missing_percentage, n_runs, run_log)
+        # exp = Exp_web_phishing.Exp_web_phishing("web_phishing")
+        # exp.run(missing_percentage, n_runs, run_log)
 
-        exp = Exp_zoo.Exp_zoo("zoo")
-        exp.run(missing_percentage, n_runs, run_log)
+        # exp = Exp_zoo.Exp_zoo("zoo")
+        # exp.run(missing_percentage, n_runs, run_log)
 
-        exp = Exp_pascal_voc_2007.Exp_pascal_voc_2007("pascal_voc_2007")
-        exp.run(missing_percentage, n_runs, run_log)
-
-        exp = Exp_alarm.Exp_alarm("alarm")
-        exp.run(missing_percentage, n_runs, run_log)
+        # exp = Exp_alarm.Exp_alarm("alarm")
+        # exp.run(missing_percentage, n_runs, run_log)
 
         exp = Exp_webkb_336.Exp_webkb_336("webkb_336")
         exp.run(missing_percentage, n_runs, run_log)
@@ -93,6 +90,9 @@ def main():
         exp.run(missing_percentage, n_runs, run_log)
 
         exp = Exp_coil_42.Exp_coil_42("coil_42")
+        exp.run(missing_percentage, n_runs, run_log)
+
+        exp = Exp_pascal_voc_2007.Exp_pascal_voc_2007("pascal_voc_2007")
         exp.run(missing_percentage, n_runs, run_log)
 
 
