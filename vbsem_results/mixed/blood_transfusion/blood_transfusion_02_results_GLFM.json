@@ -1,32 +1,38 @@
 {
-    "average_accuracy": 0.7416325836172383, 
-    "average_learning_time": 29.817154248046876, 
-    "average_nrmse": 0.11140745491144002, 
+    "average_accuracy": 0.733090987473586, 
+    "average_error": 0.14493760455228175, 
+    "average_learning_time": 76.32136220703126, 
+    "average_nrmse": 0.11444475255874872, 
     "runs": {
         "run_1": {
-            "accuracy": 0.7483443708609272, 
-            "learning_time": 30594.175048828125, 
-            "nrmse": 0.11301001478444664
+            "accuracy": 0.7284768211920529, 
+            "average_error": 0.14500956173426416, 
+            "learning_time": 76756.23291015625, 
+            "nrmse": 0.11338115746584346
         }, 
         "run_2": {
-            "accuracy": 0.7611940298507462, 
-            "learning_time": 29749.84326171875, 
-            "nrmse": 0.1071744758153388
+            "accuracy": 0.746268656716418, 
+            "average_error": 0.13718347822759927, 
+            "learning_time": 76848.4599609375, 
+            "nrmse": 0.10804651196360357
         }, 
         "run_3": {
             "accuracy": 0.78125, 
-            "learning_time": 29716.08203125, 
-            "nrmse": 0.10854169669283031
+            "average_error": 0.1318061332881983, 
+            "learning_time": 77171.1591796875, 
+            "nrmse": 0.11007016661024785
         }, 
         "run_4": {
-            "accuracy": 0.6959459459459459, 
-            "learning_time": 29767.31689453125, 
-            "nrmse": 0.11325842468144448
+            "accuracy": 0.7094594594594594, 
+            "average_error": 0.15020059327941143, 
+            "learning_time": 76218.59008789062, 
+            "nrmse": 0.11511560646412919
         }, 
         "run_5": {
-            "accuracy": 0.7214285714285714, 
-            "learning_time": 29258.35400390625, 
-            "nrmse": 0.11505266258313983
+            "accuracy": 0.7, 
+            "average_error": 0.16048825623193563, 
+            "learning_time": 74612.36889648438, 
+            "nrmse": 0.12561032028991956
         }
     }
 }

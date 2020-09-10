@@ -1,32 +1,38 @@
 {
-    "average_accuracy": 0.9242330488383119, 
-    "average_learning_time": 38.851069873046875, 
-    "average_nrmse": 0.15766489067765885, 
+    "average_accuracy": 0.8839905168326221, 
+    "average_error": 0.1553101215265728, 
+    "average_learning_time": 45.77145546875, 
+    "average_nrmse": 0.15833324755420322, 
     "runs": {
         "run_1": {
-            "accuracy": 0.875, 
-            "learning_time": 42350.978271484375, 
-            "nrmse": 0.1562253585335497
+            "accuracy": 0.85, 
+            "average_error": 0.1539577337015241, 
+            "learning_time": 38553.91015625, 
+            "nrmse": 0.1542621747554875
         }, 
         "run_2": {
-            "accuracy": 0.9791666666666666, 
-            "learning_time": 41979.52099609375, 
-            "nrmse": 0.15495286871723496
+            "accuracy": 0.9166666666666666, 
+            "average_error": 0.15841783593767578, 
+            "learning_time": 53792.669921875, 
+            "nrmse": 0.16419356690724057
         }, 
         "run_3": {
-            "accuracy": 0.9210526315789473, 
-            "learning_time": 34344.547119140625, 
-            "nrmse": 0.15275523432699345
+            "accuracy": 0.868421052631579, 
+            "average_error": 0.15217953208402837, 
+            "learning_time": 44053.580078125, 
+            "nrmse": 0.1537641924467674
         }, 
         "run_4": {
-            "accuracy": 0.9459459459459459, 
-            "learning_time": 41066.01171875, 
-            "nrmse": 0.16203646139863556
+            "accuracy": 0.8648648648648649, 
+            "average_error": 0.1551986029040146, 
+            "learning_time": 50990.76611328125, 
+            "nrmse": 0.1567419465785438
         }, 
         "run_5": {
-            "accuracy": 0.9, 
-            "learning_time": 34514.291259765625, 
-            "nrmse": 0.16235453041188058
+            "accuracy": 0.92, 
+            "average_error": 0.15679690300562135, 
+            "learning_time": 41466.35107421875, 
+            "nrmse": 0.16270435708297684
         }
     }
 }

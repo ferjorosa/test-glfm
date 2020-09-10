@@ -57,3 +57,42 @@ def accuracy(missing_data, imputed_data, true_data):
         return 1.0
 
     return right_count / missing_count
+
+
+def avg_error(missing_data, imputed_data, true_data, discrete_cols, continuous_cols):
+    normalized_error = 0.0
+
+    # Continuous attributes (NRMSE)
+    continuous_imputed_data = imputed_data[continuous_cols]
+    continuous_true_data = true_data[continuous_cols]
+    continuous_missing_data = missing_data[continuous_cols]
+
+    for j in range(0, continuous_imputed_data.shape[1]):
+        attribute_missing_count = 0.0
+        attribute_error = 0.0
+        for i in range(0, continuous_imputed_data.shape[0]):
+            if np.isnan(continuous_missing_data.iloc[i, j]):
+                attribute_missing_count += 1
+                attribute_error += np.power(continuous_imputed_data.iloc[i, j] - continuous_true_data.iloc[i, j], 2)
+        attribute_error = np.sqrt(attribute_error / attribute_missing_count)
+        normalized_error += attribute_error / (continuous_true_data.iloc[:, j].max() - continuous_true_data.iloc[:, j].min())
+
+    # Discrete attributes (Accuracy error)
+    discrete_imputed_data = imputed_data[discrete_cols]
+    discrete_true_data = true_data[discrete_cols]
+    discrete_missing_data = missing_data[discrete_cols]
+
+    for j in range(0, discrete_imputed_data.shape[1]):
+        attribute_missing_count = 0.0
+        attribute_missing_wrong = 0.0
+        for i in range(0, discrete_imputed_data.shape[0]):
+            if np.isnan(discrete_missing_data.iloc[i, j]):
+                attribute_missing_count += 1
+                if discrete_imputed_data.iloc[i, j] != discrete_true_data.iloc[i, j]:
+                    attribute_missing_wrong += 1
+        attribute_error = 0.0
+        if attribute_missing_count > 0:
+            attribute_error = attribute_missing_wrong / attribute_missing_count
+        normalized_error += attribute_error
+
+    return normalized_error / true_data.shape[1]

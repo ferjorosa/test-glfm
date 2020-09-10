@@ -40,8 +40,9 @@ class MixedExperiment:
         results = {}
         runs = {}
         avg_learning_time = 0
-        avg_nrmse = 0
-        avg_accuracy = 0
+        avg_nrmse = 0.0
+        avg_accuracy = 0.0
+        avg_avg_error = 0.0
 
         # Load missing data and impute its missing values with GLFM, then estimate its mean squared error
         results_path = "../../vbsem_results/mixed/" + self.data_name + "/"
@@ -76,34 +77,41 @@ class MixedExperiment:
             nrmse = Estimate.nrmse(missing_data[continuous_cols],
                                imputed_data[continuous_cols],
                                true_data[continuous_cols])
+            avg_error = Estimate.avg_error(missing_data, imputed_data, true_data, discrete_cols, continuous_cols)
             learning_time = end_time - init_time
 
-            run_result = {"nrmse": nrmse, "accuracy": accuracy, "learning_time": learning_time}
+            run_result = {"nrmse": nrmse, "accuracy": accuracy, "average_error": avg_error,
+                          "learning_time": learning_time}
 
             runs["run_" + str(i)] = run_result
             avg_learning_time = avg_learning_time + learning_time
             avg_nrmse = avg_nrmse + nrmse
             avg_accuracy = avg_accuracy + accuracy
+            avg_avg_error = avg_avg_error + avg_error
 
             if run_log:
                 print("----------------------------------------")
                 print("Run (" + str(i) + "): ")
                 print("NRMSE: " + str(nrmse))
                 print("Accuracy: " + str(accuracy))
+                print("AvgError: " + str(avg_error))
                 print("Learning time: " + str(learning_time))
 
         # Generate the average results and store them in the dictionary, then store them in a JSON file
         avg_nrmse = avg_nrmse / n_runs
         avg_accuracy = avg_accuracy / n_runs
+        avg_avg_error = avg_avg_error / n_runs
         avg_learning_time = avg_learning_time / n_runs / 1000  # in seconds
         results["average_nrmse"] = avg_nrmse
         results["average_accuracy"] = avg_accuracy
+        results["average_error"] = avg_avg_error
         results["average_learning_time"] = avg_learning_time
         results["runs"] = runs
         self.store_json(results, results_path, percentage_string)
 
         print("----------------------------------------")
         print("----------------------------------------")
+        print("Average Error: " + str(avg_avg_error))
         print("Average NRMSE: " + str(avg_nrmse))
         print("Average Accuracy: " + str(avg_accuracy))
         print("Average learning time: " + str(avg_learning_time))
