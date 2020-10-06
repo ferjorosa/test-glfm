@@ -23,7 +23,7 @@ def main():
     run_log = True
     exp = Exp_mobile_ksd_2016(data_name)
 
-    for i in range(3, 6):
+    for i in range(5, 6):
         missing_percentage = i / 10.0
         exp.run(missing_percentage, n_runs, run_log)
 

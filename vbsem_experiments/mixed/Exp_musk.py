@@ -23,7 +23,7 @@ def main():
     run_log = True
     exp = Exp_musk(data_name)
 
-    for i in range(1, 6):
+    for i in range(3, 6):
         missing_percentage = i / 10.0
         exp.run(missing_percentage, n_runs, run_log)
 
