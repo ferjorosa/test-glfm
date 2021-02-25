@@ -85,10 +85,14 @@ print '\n 4. PROCESSING RESULTS\n'
 
 ## Predict MAP estimate for the whole matrix X
 patterns = hidden['Z']
-X_map = GLFM.computeMAP(data['C'], patterns, hidden, params)
+#X_map = GLFM.computeMAP(data['C'], patterns, hidden, params)
 
 ### Compute log lik of the data
 loglik = GLFM.compute_log_likelihood(data['X'],data['C'],hidden,params)
+loglik_2 = GLFM.compute_log_likelihood_2(data['X'],data['C'],hidden,params) # My version of Log-likelihood estimation
+
+log_lik_sum = np.sum(loglik) #Returns -Inf due to log(0) = -Inf
+log_lik_sum_2 = np.sum(loglik_2) # My version of Log-likelihood estimation doesnt have a -Inf problem, log(0) = 0
 
 ## Plot Dimensions
 sum(hidden['Z'])
