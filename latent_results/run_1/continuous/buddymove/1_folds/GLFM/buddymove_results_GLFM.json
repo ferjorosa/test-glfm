@@ -1,0 +1,10 @@
+{
+    "average_learning_time": 12.67072509765625, 
+    "average_test_ll": -710.6278457813802, 
+    "folds": {
+        "fold_1": {
+            "learning_time": 12670.72509765625, 
+            "test_ll": -710.6278457813802
+        }
+    }
+}
