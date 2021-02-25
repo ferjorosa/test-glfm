@@ -1,28 +1,28 @@
-import ContinuousExperiment
+import MixedExperiment
 
 
-class Exp_buddymove(ContinuousExperiment.ContinuousExperiment):
+class Exp_user_knowledge(MixedExperiment.MixedExperiment):
 
     def __init__(self, _data_name):
-        ContinuousExperiment.ContinuousExperiment.__init__(self, _data_name)
+        MixedExperiment.MixedExperiment.__init__(self, _data_name)
 
     def run(self, run, n_folds, fold_log):
         print("\n------------------------------------------------------------------")
         print("------------------------------------------------------------------")
-        print("---------------------------- BUDDYMOVE ---------------------------")
+        print("------------------------- USER_KNOWLEDGE -------------------------")
         print("------------------------------------------------------------------")
         print("------------------------------------------------------------------\n")
 
-        ContinuousExperiment.ContinuousExperiment.run(self, run, n_folds, fold_log)
+        MixedExperiment.MixedExperiment.run(self, run, n_folds, fold_log)
 
 
 def main():
     run = 1
     n_folds = 10
 
-    data_name = "buddymove"
+    data_name = "user_knowledge"
     fold_log = True
-    exp = Exp_buddymove(data_name)
+    exp = Exp_user_knowledge(data_name)
     exp.run(run, n_folds, fold_log)
 
 

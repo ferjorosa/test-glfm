@@ -1,28 +1,28 @@
-import ContinuousExperiment
+import DiscreteExperiment
 
 
-class Exp_buddymove(ContinuousExperiment.ContinuousExperiment):
+class Exp_webkb_336(DiscreteExperiment.DiscreteExperiment):
 
     def __init__(self, _data_name):
-        ContinuousExperiment.ContinuousExperiment.__init__(self, _data_name)
+        DiscreteExperiment.DiscreteExperiment.__init__(self, _data_name)
 
     def run(self, run, n_folds, fold_log):
         print("\n------------------------------------------------------------------")
         print("------------------------------------------------------------------")
-        print("---------------------------- BUDDYMOVE ---------------------------")
+        print("----------------------------- WEBKB_336 --------------------------")
         print("------------------------------------------------------------------")
         print("------------------------------------------------------------------\n")
 
-        ContinuousExperiment.ContinuousExperiment.run(self, run, n_folds, fold_log)
+        DiscreteExperiment.DiscreteExperiment.run(self, run, n_folds, fold_log)
 
 
 def main():
     run = 1
     n_folds = 10
 
-    data_name = "buddymove"
+    data_name = "webkb_336"
     fold_log = True
-    exp = Exp_buddymove(data_name)
+    exp = Exp_webkb_336(data_name)
     exp.run(run, n_folds, fold_log)
 
 

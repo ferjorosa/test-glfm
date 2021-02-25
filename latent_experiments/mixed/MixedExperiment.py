@@ -12,15 +12,15 @@ sys.path.append(os.path.join(root, 'src/GLFMpython/'))
 import GLFM
 
 
-class ContinuousExperiment:
+class MixedExperiment:
 
     def __init__(self, data_name):
         self.data_name = data_name
         self.data_types = data_types(data_name)
 
     def run(self, run, n_folds, fold_log):
-        base_path = "../../latent_data/continuous/" + self.data_name + "/10_folds/"
-        results_path = "../../latent_results/run_" + str(run) + "/continuous/" + self.data_name + "/" + \
+        base_path = "../../latent_data/mixed/" + self.data_name + "/10_folds/"
+        results_path = "../../latent_results/run_" + str(run) + "/mixed/" + self.data_name + "/" + \
                        str(n_folds) + "_folds/GLFM/"
 
         print("\n========================")
@@ -40,10 +40,16 @@ class ContinuousExperiment:
             # Load data
             train_data = arff.loadarff(train_data_path)
             train_data = pd.DataFrame(train_data[0])
+            # Transform all column types to numeric (requirement of GLFM)
+            for col in train_data:
+                train_data[col] = train_data[col].astype("float64")
             train_data = train_data.values
 
             test_data = arff.loadarff(test_data_path)
             test_data = pd.DataFrame(test_data[0])
+            # Transform all column types to numeric (requirement of GLFM)
+            for col in test_data:
+                test_data[col] = test_data[col].astype("float64")
             test_data = test_data.values
 
             # Prepare GLFM data structure
@@ -112,7 +118,7 @@ class ContinuousExperiment:
 
 
 def data_types(data_name):
-    data_path = "../../latent_data/continuous/" + data_name + "/10_folds/" + data_name + "_1_train.arff"
+    data_path = "../../latent_data/mixed/" + data_name + "/10_folds/" + data_name + "_1_train.arff"
     data = arff.loadarff(data_path)
     data = pd.DataFrame(data[0])
 

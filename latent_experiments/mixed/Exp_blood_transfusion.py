@@ -1,28 +1,28 @@
-import ContinuousExperiment
+import MixedExperiment
 
 
-class Exp_buddymove(ContinuousExperiment.ContinuousExperiment):
+class Exp_blood_transfusion(MixedExperiment.MixedExperiment):
 
     def __init__(self, _data_name):
-        ContinuousExperiment.ContinuousExperiment.__init__(self, _data_name)
+        MixedExperiment.MixedExperiment.__init__(self, _data_name)
 
     def run(self, run, n_folds, fold_log):
         print("\n------------------------------------------------------------------")
         print("------------------------------------------------------------------")
-        print("---------------------------- BUDDYMOVE ---------------------------")
+        print("------------------------ BLOOD_TRANSFUSION -----------------------")
         print("------------------------------------------------------------------")
         print("------------------------------------------------------------------\n")
 
-        ContinuousExperiment.ContinuousExperiment.run(self, run, n_folds, fold_log)
+        MixedExperiment.MixedExperiment.run(self, run, n_folds, fold_log)
 
 
 def main():
     run = 1
     n_folds = 10
 
-    data_name = "buddymove"
+    data_name = "blood_transfusion"
     fold_log = True
-    exp = Exp_buddymove(data_name)
+    exp = Exp_blood_transfusion(data_name)
     exp.run(run, n_folds, fold_log)
 
 

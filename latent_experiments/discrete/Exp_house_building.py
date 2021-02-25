@@ -1,28 +1,28 @@
-import ContinuousExperiment
+import DiscreteExperiment
 
 
-class Exp_buddymove(ContinuousExperiment.ContinuousExperiment):
+class Exp_house_building(DiscreteExperiment.DiscreteExperiment):
 
     def __init__(self, _data_name):
-        ContinuousExperiment.ContinuousExperiment.__init__(self, _data_name)
+        DiscreteExperiment.DiscreteExperiment.__init__(self, _data_name)
 
     def run(self, run, n_folds, fold_log):
         print("\n------------------------------------------------------------------")
         print("------------------------------------------------------------------")
-        print("---------------------------- BUDDYMOVE ---------------------------")
+        print("-------------------------- HOUSE_BUILDING ------------------------")
         print("------------------------------------------------------------------")
         print("------------------------------------------------------------------\n")
 
-        ContinuousExperiment.ContinuousExperiment.run(self, run, n_folds, fold_log)
+        DiscreteExperiment.DiscreteExperiment.run(self, run, n_folds, fold_log)
 
 
 def main():
     run = 1
     n_folds = 10
 
-    data_name = "buddymove"
+    data_name = "house_building"
     fold_log = True
-    exp = Exp_buddymove(data_name)
+    exp = Exp_house_building(data_name)
     exp.run(run, n_folds, fold_log)
 
 

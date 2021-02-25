@@ -1,7 +1,7 @@
 import ContinuousExperiment
 
 
-class Exp_buddymove(ContinuousExperiment.ContinuousExperiment):
+class Exp_100_plants(ContinuousExperiment.ContinuousExperiment):
 
     def __init__(self, _data_name):
         ContinuousExperiment.ContinuousExperiment.__init__(self, _data_name)
@@ -9,7 +9,7 @@ class Exp_buddymove(ContinuousExperiment.ContinuousExperiment):
     def run(self, run, n_folds, fold_log):
         print("\n------------------------------------------------------------------")
         print("------------------------------------------------------------------")
-        print("---------------------------- BUDDYMOVE ---------------------------")
+        print("--------------------------- 100_PLANTS ---------------------------")
         print("------------------------------------------------------------------")
         print("------------------------------------------------------------------\n")
 
@@ -20,9 +20,9 @@ def main():
     run = 1
     n_folds = 10
 
-    data_name = "buddymove"
+    data_name = "100_plants"
     fold_log = True
-    exp = Exp_buddymove(data_name)
+    exp = Exp_100_plants(data_name)
     exp.run(run, n_folds, fold_log)
 
 
