@@ -23,11 +23,11 @@ def main():
     # exp = Exp_arrythmia.Exp_arrythmia("arryhtmia")
     # exp.run(run, n_folds, fold_log)
 
-    exp = Exp_autos.Exp_autos("autos")
-    exp.run(run, n_folds, fold_log)
+    # exp = Exp_autos.Exp_autos("autos")
+    # exp.run(run, n_folds, fold_log)
 
-    exp = Exp_blood_transfusion.Exp_blood_transfusion("blood_transfusion")
-    exp.run(run, n_folds, fold_log)
+    # exp = Exp_blood_transfusion.Exp_blood_transfusion("blood_transfusion")
+    # exp.run(run, n_folds, fold_log)
 
     exp = Exp_breast_cancer_coimbra.Exp_breast_cancer_coimbra("breast_cancer_coimbra")
     exp.run(run, n_folds, fold_log)

@@ -19,20 +19,20 @@ def main():
     n_folds = 10
     fold_log = True
 
-    exp = Exp_hiv_test.Exp_hiv_test("hiv_test")
-    exp.run(run, n_folds, fold_log)
+    # exp = Exp_hiv_test.Exp_hiv_test("hiv_test")
+    # exp.run(run, n_folds, fold_log)
+    # 
+    # exp = Exp_house_building.Exp_house_building("house_building")
+    # exp.run(run, n_folds, fold_log)
+    #
+    # exp = Exp_hayes_roth.Exp_hayes_roth("hayes_roth")
+    # exp.run(run, n_folds, fold_log)
+    #
+    # exp = Exp_balance_scale.Exp_balance_scale("balance_scale")
+    # exp.run(run, n_folds, fold_log)
 
-    exp = Exp_house_building.Exp_house_building("house_building")
-    exp.run(run, n_folds, fold_log)
-
-    exp = Exp_hayes_roth.Exp_hayes_roth("hayes_roth")
-    exp.run(run, n_folds, fold_log)
-
-    exp = Exp_balance_scale.Exp_balance_scale("balance_scale")
-    exp.run(run, n_folds, fold_log)
-
-    exp = Exp_car_evaluation.Exp_car_evaluation("car_evaluation")
-    exp.run(run, n_folds, fold_log)
+    # exp = Exp_car_evaluation.Exp_car_evaluation("car_evaluation")
+    # exp.run(run, n_folds, fold_log)
 
     exp = Exp_nursery.Exp_nursery("nursery")
     exp.run(run, n_folds, fold_log)
