@@ -5,7 +5,7 @@ from latent_experiments.continuous import Exp_geo_music
 from latent_experiments.continuous import Exp_glass
 from latent_experiments.continuous import Exp_ilpd
 from latent_experiments.continuous import Exp_ionosphere
-from latent_experiments.continuous import Exp_iris
+from latent_experiments.mixed import Exp_iris
 from latent_experiments.continuous import Exp_leaf
 from latent_experiments.continuous import Exp_nba
 from latent_experiments.continuous import Exp_vehicle

@@ -1,18 +1,18 @@
 @relation dataset
 
-@attribute Alcohol real
-@attribute Malic_acid real
-@attribute Ash real
-@attribute Alcalinity_of_ash real
-@attribute Magnesium real
-@attribute Total_phenols real
-@attribute Flavanoids real
-@attribute Nonflavanoid_phenols real
-@attribute Proanthocyanins real
-@attribute Color_intensity real
-@attribute Hue real
-@attribute OD280_OD315_of_diluted_wines real
-@attribute Proline real
+@attribute alcohol real
+@attribute malic_acid real
+@attribute ash real
+@attribute alcalinity_of_ash real
+@attribute magnesium real
+@attribute total_phenols real
+@attribute flavanoids real
+@attribute nonflavanoid_phenols real
+@attribute proanthocyanins real
+@attribute color_intensity real
+@attribute hue real
+@attribute od280_od315_of_diluted_wines real
+@attribute proline real
 
 
 @data

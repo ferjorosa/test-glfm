@@ -1,35 +1,35 @@
 @relation dataset
 
-@attribute RealValuedInputFeature_1 real
-@attribute RealValuedInputFeature_2 real
-@attribute RealValuedInputFeature_3 real
-@attribute RealValuedInputFeature_4 real
-@attribute RealValuedInputFeature_5 real
-@attribute RealValuedInputFeature_6 real
-@attribute RealValuedInputFeature_7 real
-@attribute RealValuedInputFeature_8 real
-@attribute RealValuedInputFeature_9 real
-@attribute RealValuedInputFeature_10 real
-@attribute RealValuedInputFeature_11 real
-@attribute RealValuedInputFeature_12 real
-@attribute RealValuedInputFeature_13 real
-@attribute RealValuedInputFeature_14 real
-@attribute RealValuedInputFeature_15 real
-@attribute RealValuedInputFeature_16 real
-@attribute RealValuedInputFeature_17 real
-@attribute RealValuedInputFeature_18 real
-@attribute RealValuedInputFeature_19 real
-@attribute RealValuedInputFeature_20 real
-@attribute RealValuedInputFeature_21 real
-@attribute RealValuedInputFeature_22 real
-@attribute RealValuedInputFeature_23 real
-@attribute RealValuedInputFeature_24 real
-@attribute RealValuedInputFeature_25 real
-@attribute RealValuedInputFeature_26 real
-@attribute RealValuedInputFeature_27 real
-@attribute RealValuedInputFeature_28 real
-@attribute RealValuedInputFeature_29 real
-@attribute RealValuedInputFeature_30 real
+@attribute realvaluedinputfeature_1 real
+@attribute realvaluedinputfeature_2 real
+@attribute realvaluedinputfeature_3 real
+@attribute realvaluedinputfeature_4 real
+@attribute realvaluedinputfeature_5 real
+@attribute realvaluedinputfeature_6 real
+@attribute realvaluedinputfeature_7 real
+@attribute realvaluedinputfeature_8 real
+@attribute realvaluedinputfeature_9 real
+@attribute realvaluedinputfeature_10 real
+@attribute realvaluedinputfeature_11 real
+@attribute realvaluedinputfeature_12 real
+@attribute realvaluedinputfeature_13 real
+@attribute realvaluedinputfeature_14 real
+@attribute realvaluedinputfeature_15 real
+@attribute realvaluedinputfeature_16 real
+@attribute realvaluedinputfeature_17 real
+@attribute realvaluedinputfeature_18 real
+@attribute realvaluedinputfeature_19 real
+@attribute realvaluedinputfeature_20 real
+@attribute realvaluedinputfeature_21 real
+@attribute realvaluedinputfeature_22 real
+@attribute realvaluedinputfeature_23 real
+@attribute realvaluedinputfeature_24 real
+@attribute realvaluedinputfeature_25 real
+@attribute realvaluedinputfeature_26 real
+@attribute realvaluedinputfeature_27 real
+@attribute realvaluedinputfeature_28 real
+@attribute realvaluedinputfeature_29 real
+@attribute realvaluedinputfeature_30 real
 
 
 @data

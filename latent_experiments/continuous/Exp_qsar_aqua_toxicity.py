@@ -1,0 +1,30 @@
+import ContinuousExperiment
+
+
+class Exp_qsar_aqua_toxicity(ContinuousExperiment.ContinuousExperiment):
+
+    def __init__(self, _data_name):
+        ContinuousExperiment.ContinuousExperiment.__init__(self, _data_name)
+
+    def run(self, run, n_folds, fold_log):
+        print("\n------------------------------------------------------------------")
+        print("------------------------------------------------------------------")
+        print("----------------------- QSAR_AQUA_TOXICITY -----------------------")
+        print("------------------------------------------------------------------")
+        print("------------------------------------------------------------------\n")
+
+        ContinuousExperiment.ContinuousExperiment.run(self, run, n_folds, fold_log)
+
+
+def main():
+    run = 1
+    n_folds = 10
+
+    data_name = "qsar_aqua_toxicity"
+    fold_log = True
+    exp = Exp_qsar_aqua_toxicity(data_name)
+    exp.run(run, n_folds, fold_log)
+
+
+if __name__ == "__main__":
+    main()
