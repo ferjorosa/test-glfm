@@ -78,7 +78,7 @@ class MixedExperiment:
             learning_time = end_time - init_time
 
             # Average results
-            fold_result = {"test_ll": test_ll, "learning_time": learning_time}
+            fold_result = {"test_LL": test_ll, "learning_time": learning_time}
 
             folds["fold_" + str(i)] = fold_result
             avg_learning_time = avg_learning_time + learning_time
@@ -93,7 +93,7 @@ class MixedExperiment:
         # Generate the average results and store them in the dictionary, then store them in a JSON file
         avg_test_ll = avg_test_ll / n_folds
         avg_learning_time = avg_learning_time / n_folds / 1000  # in seconds
-        results["average_test_ll"] = avg_test_ll
+        results["average_test_LL"] = avg_test_ll
         results["average_learning_time"] = avg_learning_time
         results["folds"] = folds
         self.store_json(results, results_path)
