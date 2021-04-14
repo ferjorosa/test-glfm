@@ -543,7 +543,10 @@ def compute_log_likelihood_2(
             pdf = mf.pdf_c(hidden['Z'][n, :],
                            hidden['B'][d, :, range(int(hidden['R'][d].shape[0]))],
                            hidden['s2Y'][d])
-            lik[cord] = pdf[int(tnd - 1)]  # -1 since the max category is indexed by max_val -1
+            try:
+                lik[cord] = pdf[int(tnd - 1)]  # -1 since the max category is indexed by max_val -1
+            except IndexError:
+                print("Error")
 
         elif C[d] == 'o':
             # Ordinal
