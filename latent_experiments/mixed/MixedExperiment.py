@@ -33,7 +33,7 @@ class MixedExperiment:
         avg_test_ll = 0
 
         # Prepare folds' data
-        for i in range(5, n_folds+1):
+        for i in range(9, n_folds+1):
             train_data_path = base_path + self.data_name + "_" + str(i) + "_train.arff"
             test_data_path = base_path + self.data_name + "_" + str(i) + "_test.arff"
 
