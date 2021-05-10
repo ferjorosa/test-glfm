@@ -35,7 +35,10 @@ def nrmse(missing_data, imputed_data, true_data):
                 attribute_missing_count += 1
                 attribute_error += np.power(imputed_data.iloc[i, j] - true_data.iloc[i, j], 2)
         attribute_error = np.sqrt(attribute_error / attribute_missing_count)
-        normalized_error += attribute_error / (true_data.iloc[:, j].max() - true_data.iloc[:, j].min())
+        normalized_attribute_error = attribute_error
+        if attribute_error != 0 and (true_data.iloc[:, j].max() - true_data.iloc[:, j].min()) != 0:
+            normalized_attribute_error = attribute_error / (true_data.iloc[:, j].max() - true_data.iloc[:, j].min())
+        normalized_error += normalized_attribute_error
 
     if total_missing_count == 0:
         return 0.0
@@ -75,7 +78,10 @@ def avg_error(missing_data, imputed_data, true_data, discrete_cols, continuous_c
                 attribute_missing_count += 1
                 attribute_error += np.power(continuous_imputed_data.iloc[i, j] - continuous_true_data.iloc[i, j], 2)
         attribute_error = np.sqrt(attribute_error / attribute_missing_count)
-        normalized_error += attribute_error / (continuous_true_data.iloc[:, j].max() - continuous_true_data.iloc[:, j].min())
+        normalized_attribute_error = attribute_error
+        if attribute_error != 0 and (continuous_true_data.iloc[:, j].max() - continuous_true_data.iloc[:, j].min()) != 0:
+            normalized_attribute_error = attribute_error / (continuous_true_data.iloc[:, j].max() - continuous_true_data.iloc[:, j].min())
+        normalized_error += normalized_attribute_error
 
     # Discrete attributes (Accuracy error)
     discrete_imputed_data = imputed_data[discrete_cols]

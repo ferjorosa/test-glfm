@@ -1,7 +1,7 @@
 import MixedExperiment
 
 
-class Exp_user_knowledge(MixedExperiment.MixedExperiment):
+class Exp_housing_prices(MixedExperiment.MixedExperiment):
 
     def __init__(self, _data_name):
         MixedExperiment.MixedExperiment.__init__(self, _data_name)
@@ -9,7 +9,7 @@ class Exp_user_knowledge(MixedExperiment.MixedExperiment):
     def run(self, missing_percentage, n_runs, run_log):
         print("\n------------------------------------------------------------------")
         print("------------------------------------------------------------------")
-        print("------------------------- USER_KNOWLEDGE -------------------------")
+        print("------------------------- HOUSING_PRICES -------------------------")
         print("------------------------------------------------------------------")
         print("------------------------------------------------------------------\n")
         print("Missing percentage: " + str(missing_percentage) + "\n")
@@ -19,11 +19,11 @@ class Exp_user_knowledge(MixedExperiment.MixedExperiment):
 
 def main():
     n_runs = 1
-    data_name = "user_knowledge"
+    data_name = "housing_prices"
     run_log = True
-    exp = Exp_user_knowledge(data_name)
+    exp = Exp_housing_prices(data_name)
 
-    for i in range(1, 6):
+    for i in range(4, 6):
         missing_percentage = i / 10.0
         exp.run(missing_percentage, n_runs, run_log)
 

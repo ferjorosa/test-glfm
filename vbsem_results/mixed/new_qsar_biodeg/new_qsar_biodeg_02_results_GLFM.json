@@ -1,0 +1,14 @@
+{
+    "average_accuracy": 0.9381989405532666, 
+    "average_error": 0.0729787060413303, 
+    "average_learning_time": 3208.29691796875, 
+    "average_nrmse": 0.07543051239465491, 
+    "runs": {
+        "run_1": {
+            "accuracy": 0.9381989405532666, 
+            "average_error": 0.0729787060413303, 
+            "learning_time": 3208296.91796875, 
+            "nrmse": 0.07543051239465491
+        }
+    }
+}

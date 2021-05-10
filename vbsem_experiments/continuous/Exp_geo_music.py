@@ -18,12 +18,12 @@ class Exp_geo_music(ContinuousExperiment.ContinuousExperiment):
 
 
 def main():
-    n_runs = 5
+    n_runs = 1
     data_name = "geo_music"
     run_log = True
     exp = Exp_geo_music(data_name)
 
-    for i in range(1, 6):
+    for i in range(3, 6):
         missing_percentage = i / 10.0
         exp.run(missing_percentage, n_runs, run_log)
 

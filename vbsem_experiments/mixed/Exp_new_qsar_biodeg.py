@@ -1,7 +1,7 @@
 import MixedExperiment
 
 
-class Exp_user_knowledge(MixedExperiment.MixedExperiment):
+class Exp_new_qsar_biodeg(MixedExperiment.MixedExperiment):
 
     def __init__(self, _data_name):
         MixedExperiment.MixedExperiment.__init__(self, _data_name)
@@ -9,7 +9,7 @@ class Exp_user_knowledge(MixedExperiment.MixedExperiment):
     def run(self, missing_percentage, n_runs, run_log):
         print("\n------------------------------------------------------------------")
         print("------------------------------------------------------------------")
-        print("------------------------- USER_KNOWLEDGE -------------------------")
+        print("------------------------- NEW_QSAR_BIODEG ------------------------")
         print("------------------------------------------------------------------")
         print("------------------------------------------------------------------\n")
         print("Missing percentage: " + str(missing_percentage) + "\n")
@@ -19,9 +19,9 @@ class Exp_user_knowledge(MixedExperiment.MixedExperiment):
 
 def main():
     n_runs = 1
-    data_name = "user_knowledge"
+    data_name = "new_qsar_biodeg"
     run_log = True
-    exp = Exp_user_knowledge(data_name)
+    exp = Exp_new_qsar_biodeg(data_name)
 
     for i in range(1, 6):
         missing_percentage = i / 10.0
